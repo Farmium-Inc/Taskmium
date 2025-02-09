@@ -1,38 +1,412 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Sf-sex";
+  src: url('./assets/Fonts/Black.woff');
+  font-style: normal;
+  font-weight: 900;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Heavy.woff');
+  font-style: normal;
+  font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Bold.woff');
+  font-style: normal;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Semibold.woff');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Medium.woff');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Regular.woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Light.woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Ultralight.woff');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Sf-sex;
+  src: url('./assets/Fonts/Bold.woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Emoji Font */
+@font-face {
+  font-family: 'AppleColorEmoji';
+  src: url('./assets/Fonts/AppleColorEmoji.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+.emoji {
+  font-family: 'AppleColorEmoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+/* ---------------------------------------- */
+* {
+  font-family: Sf-sex;
+  /* border: 0.05px solid gray;
+  border-style: dashed; */
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Sf-sex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.middle-column {
+  flex: 1;
+  background-color: #1e1e1e;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-column {
+  width: 400px;
+  flex-shrink: 0;
+  background-color: #1e1e1e;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.weather-widget {
+  width: 100%;
+  padding: 35px 50px;
+  border-radius: 18px;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(33, 119, 156, 0.2) 10%, rgba(30, 30, 30, 0.2) 90%);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  box-sizing: border-box;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.weather-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.weather-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-right {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.weather-icon {
+  font-size: 70px;
+}
+
+.middle-content {
+  width: 100%;
+  background-color: #2E2E2E;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 25px;
+  height: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto;
+  margin: 30px;
+}
+
+.time-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #AED350;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 18px;
+  padding: 0 1rem;
+  height: 50px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.left-column {
+  width: 350px;
+  padding: 30px;
+  flex-shrink: 0;
+  background-color: #1e1e1e;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 35px;
+}
+
+.task-container {
+  width: 100%;
+  height: 100%;
+}
+
+.task {
+  background-color: #252525;
+  height: 50px;
+  width: 100%;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.emoji-task {
+  margin-right: 10px;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.delete-task-button {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #FF5C5C;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.inbox-today {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.events-box {
+  background-color: #1e1e1e;
+  height: 60px;
+  width: 340px;
+  border-radius: 18px;
+
+  border: 1px solid red;
+  text-align: center;
+}
+
+.Top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  border-radius: 20px;
+  height: 60px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto;
+  margin: 5px;
+}
+
+.Logo {
+  width: 50px;
+  height: 50px;
+}
+
+.chevron-left {
+  width: 28px;
+  height: 28px;
+}
+
+.main-buttons {
+  background-color: #2E2E2E;
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 18px;
+  font-size: 18px;
+  font-family: "Sf-sex";
+  font-weight: 500;
+  width: 100%;
+  height: 44px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.main-buttons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* New Styles for the Add Task Input with Emoji and Plus Button */
+.add-task-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.add-task-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #252525;
+  border-radius: 18px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.task-emoji {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
   color: white;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.add-task-button {
+  background-color: #2E2E2E;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-column,
+  .middle-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .middle-column {
+    margin: 0;
   }
 }
