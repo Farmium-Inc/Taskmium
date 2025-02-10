@@ -190,7 +190,7 @@ function App() {
               <div className="weather-left">
                 <h2>{weather.city}</h2>
                 <div className="weather-info">
-                  <span>{weather.temperature}°C</span>
+                  <span>{weather.temperature}°Cmeow</span>
                   <span>{weather.condition.description}</span>
                 </div>
               </div>
