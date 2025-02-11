@@ -246,6 +246,12 @@ body {
   gap: 35px;
 }
 
+.right-column {
+  background-image: url('./assets/rightsidepicture.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .task-container {
   width: 100%;
   height: 100%;
