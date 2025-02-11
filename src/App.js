@@ -130,15 +130,19 @@ function App() {
     <div className="container">
       {/* ---------- Left Column ---------- */}
       <div className="left-column">
-        <div className="Top-header">
-          <div className="box" style={{ backgroundColor: '#6E6E6E' }}>📥</div>
-          <div className="box"><span></span>☀️</div>
-        </div>
 
-        <div className="inbox-today">
-          <div className="main-buttons">📥 Inbox</div>
-          <div className="main-buttons">🎈 Today</div>
-        </div>
+        {/* <div className='left-column-top-container'> */}
+          <div className="Top-header">
+            <div className="box" style={{ backgroundColor: '#6E6E6E' }}>📥</div>
+            <div className="box"><span></span>☀️</div>
+          </div>
+
+          <div className="inbox-today">
+            <div className="main-buttons">📥 Inbox</div>
+            <div className="main-buttons">🎈 Today</div>
+          </div>
+        {/* </div> */}
+        
       </div>
 
       {/* ---------- Middle Column ---------- */}
@@ -182,29 +186,47 @@ function App() {
 
       {/* ---------- Right Column ---------- */}
       <div className="right-column">
-        <div className="weather-widget">
-          {loading && <p>Loading...</p>}
-          {error && <p>{error}</p>}
-          {weather && (
-            <div className="weather-content">
-              <div className="weather-left">
-                <h2>{weather.city}</h2>
-                <div className="weather-info">
-                  <span>{weather.temperature}°C</span>
-                  <span>{weather.condition.description}</span>
+
+        
+
+        {/* <div style={{width: '100%'}}>
+            
+          <div className="weather-widget">
+            {loading && <p>Loading...</p>}
+            {error && <p>{error}</p>}
+            {weather && (
+              <div className="weather-content">
+                <div className="weather-left">
+                  <h2>{weather.city}</h2>
+                  <div className="weather-info">
+                    <span>{weather.temperature}°C</span>
+                    <span>{weather.condition.description}</span>
+                  </div>
+                </div>
+                <div className="weather-right">
+                  <span className="weather-icon emoji">{weather.condition.icon}</span>
                 </div>
               </div>
-              <div className="weather-right">
-                <span className="weather-icon emoji">{weather.condition.icon}</span>
-              </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="day-events">
-          <h1>Your day</h1>
-          <div className="events-box"><span style={{border: "1px solid red", height: 5,}}></span>Meow</div>
-          <div className="events-box">Meow</div>
+          <div className="day-events" style={{width: '85%', margin: 'auto'}}>
+            <h1>Your day</h1>
+            <div className="events-box">
+              <div>
+              <span className='events-box-line'></span>
+              Find a kitten
+              </div>
+              <span className='events-box-timing'>8 PM - 11 PM</span>
+            </div>
+            <div className="events-box">
+              <div>
+              <span className='events-box-line'></span>
+              Clean the litterbox
+              </div>
+              <span className='events-box-timing'>11 PM - 12 AM</span>
+            </div>
+            </div>
 
         </div>
 
@@ -213,7 +235,8 @@ function App() {
             <span className="time">11.11</span>
           </div>
           <div className="chevron-timer"></div>
-        </div>
+        </div> */}
+
       </div>
     </div>
   );
